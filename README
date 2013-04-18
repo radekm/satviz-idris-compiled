@@ -1,0 +1,4 @@
+SAT solver visualization. Supports watched literals
+and recursive minimization of learned clause.
+
+See http://radekm.github.io/satviz-compiled/Satviz.html
