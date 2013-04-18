@@ -1,0 +1,259 @@
+/* Copyright (c) 2013 Radek Micek */
+
+body {
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+input.addClauseBtn, input.nextBtn {
+  position: absolute;
+  top: 478px;
+  left: 242px;
+}
+
+input.startVisBtn, input.prevBtn {
+  position: absolute;
+  top: 478px;
+  left: 4px;
+}
+
+span.checkBoxRoot {
+  font-size: 16px;
+}
+
+span.autoAssigCB {
+  position: absolute;
+  top: 20px;
+  left: 4px;
+}
+
+span.conflAnalVisCB {
+  position: absolute;
+  top: 50px;
+  left: 4px;
+}
+
+span.watchedLitsCB {
+  position: absolute;
+  top: 80px;
+  left: 4px;
+}
+
+span.minClauseCB {
+  position: absolute;
+  top: 110px;
+  left: 4px;
+}
+
+input.goOnBtn {
+  position: absolute;
+  top: 140px;
+  left: 4px;
+}
+
+div.msgView {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border: 1px solid blue;
+  width: 220px;
+  height: 150px;
+  margin: 0;
+  padding: 6px;
+}
+
+div.msgView strong {
+  font-weight: normal;
+  color: blue;
+}
+
+ul.clauseView {
+  position: absolute;
+  top: 4px;
+  left: 242px;
+  list-style-type: none;
+  border: 1px solid blue;
+  width: 220px;
+  height: 468px;
+  overflow: auto;
+  margin: 0;
+  padding: 0 6px;
+}
+
+ul.clauseView ul {
+  /* Space among lines. */
+  margin: 6px 0;
+  padding: 0;
+}
+
+ul.clauseView > li {
+  position: relative;
+  padding-left: 14px;
+}
+
+ul.clauseView > li.before:before {
+  position: absolute;
+  left: -4px;
+  content: "➡";
+  color: #bbb;
+  font-weight: bold;
+}
+
+ul.clauseView > li.cur:before {
+  position: absolute;
+  left: -4px;
+  content: "➡";
+  color: #f00;
+  font-weight: bold;
+}
+
+ul.clauseView > li.after:before {
+  position: absolute;
+  left: -4px;
+  content: "➡";
+  color: #000;
+  font-weight: bold;
+}
+
+ul.clauseView ul li {
+  display: inline;
+  /* Space among literals on the same line. */
+  margin: 0;
+}
+
+ul.clauseView ul li:after {
+  content: "∨";
+  color: black;
+  margin: 0px 6px;
+}
+
+ul.clauseView ul li:last-child:after {
+  content: "";
+  margin: 0;
+}
+
+
+ul.clauseView li.sat {
+  color: green;
+}
+
+ul.clauseView li.unsat {
+  color: red;
+}
+
+ul.clauseView li.unassigned {
+  color: black;
+}
+
+ul.clauseView li.watched span {
+  border: 1px solid blue;
+  border-radius: 8px;
+}
+
+ul.assigView {
+  position: absolute;
+  top: 172px;
+  left: 4px;
+  list-style-type: none;
+  border: 1px solid blue;
+  width: 224px;
+  height: 300px;
+  overflow: auto;
+  margin: 0;
+  padding: 0 4px;
+}
+
+ul.assigView ul {
+  /* Space among lines. */
+  margin: 12px 0;
+  padding: 0;
+}
+
+ul.assigView ul li {
+  display: inline;
+  border-radius: 8px;
+  padding: 2px 6px;
+  /* Space among literals on the same line. */
+  margin: 0px 3px;
+}
+
+ul.assigView li li {
+  border-width: 2px;
+  border-style: solid;
+}
+
+ul.assigView li.decided {
+  background-color: #aaa;
+  border-color: #777;
+}
+
+ul.assigView li.forced {
+  background-color: #33cc66;
+  border-color: #009933;
+}
+
+svg.implGraphView {
+  position: absolute;
+  left: 480px;
+  top: 4px;
+  border: 1px solid blue;
+}
+
+svg.implGraphView line {
+  stroke: #000;
+  stroke-width: 1px;
+}
+
+svg.implGraphView line.cut {
+  stroke: #00f;
+}
+
+svg.implGraphView line.proc {
+  stroke: #cc0000;
+}
+
+svg.implGraphView line.minim {
+  stroke: #cc0000;
+}
+
+svg.implGraphView circle {
+  stroke-width: 2px;
+}
+
+svg.implGraphView circle.decided {
+  stroke: #777;
+  fill: #aaa;
+}
+
+svg.implGraphView circle.forced {
+  stroke: #009933;
+  fill: #33cc66;
+}
+
+svg.implGraphView circle.inConflClause {
+  stroke: #00f;
+}
+
+svg.implGraphView circle.proc {
+  stroke: #cc0000;
+}
+
+svg.implGraphView circle.minim {
+  stroke: #cc0000;
+}
+
+svg.implGraphView circle.conflVertex {
+  stroke: #cc0000;
+  fill: #ff3333;
+}
+
+svg.implGraphView text {
+  font: 14px;
+  pointer-events: none;
+}
+
+svg.implGraphView text.shadow {
+  stroke: #fff;
+  stroke-width: 3px;
+  stroke-opacity: 0.8;
+}
